@@ -1,0 +1,9 @@
+@import "../../../../_variables";
+@import "../../../../_mixins";
+footer {
+  @include gradient;
+  padding: 1rem;
+  font-size: .75rem;
+  color: $color-white;
+  text-align: center;
+}

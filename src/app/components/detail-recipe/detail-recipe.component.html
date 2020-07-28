@@ -1,22 +1,36 @@
 <div class="recipe-content">
-  <img src="{{recipe.icon}}"/>
-  <h1>{{recipe.title_icon}}</h1>
-  <div class="detail">
-    <div class="">
-      <img (click)="openModal()" src="{{recipe.image}}">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="image-recipe">
+        <img (click)="openModal()" src="{{recipe.image}}">
+      </div>
     </div>
-    <div class="">
-      <h2>Ingredientes</h2>
-      <ul class="bullets">
-        <li *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</li>
-      </ul>
-      <h2>Preparación</h2>
-      <div class="row" *ngFor="let preparation of recipe.preparation; let i = index">
-        <div class="col-auto">{{i + 1}}</div>
-        <div class="col">{{preparation}}</div>
+    <div class="col-12 col-md-6">
+
+      <div class="detail">
+        <div class="main-title">
+          <img class="recipe-icon" src="{{recipe.icon}}"/>
+          <h1>{{recipe.title_icon}}</h1>
+        </div>
+        <div class="content">
+          <h2>Ingredientes</h2>
+          <ul class="bullets">
+            <li *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</li>
+          </ul>
+          <h2>Preparación</h2>
+          <div class="col steps">
+            <div class="row" *ngFor="let preparation of recipe.preparation; let i = index">
+              <div class="col-auto number">{{i + 1}}</div>
+              <div class="col">{{preparation}}</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+
+
 </div>
 <div *ngIf="modal">
   <app-modal (close)="openModal()">

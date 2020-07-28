@@ -20,14 +20,15 @@ ul {
   &.bullets {
     list-style-type: none;
     padding-left: 1rem;
+    margin-bottom: 2rem;
     li {
       @include display-align(flex, null, center);
       position: relative;
-      margin-bottom: 1rem;
+      margin-bottom: .2rem;
       line-height: 1.5;
       &:before {
         content: '-';
-        @include paragraphs(22pt, 1.2rem);
+        @include paragraphs(1rem, 1.2);
         color: $color-text;
         position: absolute;
         left: -1rem;
