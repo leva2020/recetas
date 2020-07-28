@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "_variables";
+@import "_mixins";
+@import "_base";
+
+.navbar {
+  @include gradient;
+  img {
+    min-width: 5rem;
+    @media screen and (max-width: 480px) {
+      min-width: 4rem;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $color-white;
+        padding: 0 1rem;
+        @media screen and (max-width: 480px) {
+          font-size: .75rem;
+        }
+      }
+    }
+  }
+}
+

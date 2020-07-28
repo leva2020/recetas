@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');@font-face {
+  font-family: 'Algerian';
+  src: url('assets/fonts/algerian_regular-webfont.woff2') format('woff2'),
+  url('assets/fonts/algerian_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import "_variables";
+@import "_mixins";
+* {
+  font-family: $font-text;
+}
+img {
+  max-width: 100%;
+}
+p {
+  font-weight: 300;
+}
+ul {
+  &.bullets {
+    list-style-type: none;
+    padding-left: 1rem;
+    li {
+      @include display-align(flex, null, center);
+      position: relative;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      &:before {
+        content: '-';
+        @include paragraphs(22pt, 1.2rem);
+        color: $color-text;
+        position: absolute;
+        left: -1rem;
+      }
+    }
+  }
+}

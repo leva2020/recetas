@@ -1,0 +1,23 @@
+@mixin dimensions($height, $width) {
+  width: $width;
+  height: $height;
+}
+@mixin display-align($display, $justify-content, $align-items) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin paragraphs($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin gradient {
+  background : -moz-linear-gradient(34.11% 458.79% 0deg,rgba(246, 139, 31, 1) 0%,rgba(222, 24, 37, 1) 48%,rgba(139, 0, 39, 1) 100%);
+  background : -webkit-linear-gradient(0deg, rgba(246, 139, 31, 1) 0%, rgba(222, 24, 37, 1) 48%, rgba(139, 0, 39, 1) 100%);
+  background : -webkit-gradient(linear,34.11% 458.79% ,34.16% 458.79% ,color-stop(0,rgba(246, 139, 31, 1) ),color-stop(0.48,rgba(222, 24, 37, 1) ),color-stop(1,rgba(139, 0, 39, 1) ));
+  background : -o-linear-gradient(0deg, rgba(246, 139, 31, 1) 0%, rgba(222, 24, 37, 1) 48%, rgba(139, 0, 39, 1) 100%);
+  background : -ms-linear-gradient(0deg, rgba(246, 139, 31, 1) 0%, rgba(222, 24, 37, 1) 48%, rgba(139, 0, 39, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#F68B1F', endColorstr='#8B0027' ,GradientType=0)";
+  background : linear-gradient(90deg, rgba(246, 139, 31, 1) 0%, rgba(222, 24, 37, 1) 48%, rgba(139, 0, 39, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F68B1F',endColorstr='#8B0027' , GradientType=1);
+}
