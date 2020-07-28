@@ -2,6 +2,7 @@
 @import "_mixins";
 @import "_base";
 
+//Header
 .navbar {
   @include gradient;
   img {
@@ -25,3 +26,11 @@
   }
 }
 
+//Footer
+footer {
+  @include gradient;
+  padding: 1rem;
+  font-size: .75rem;
+  color: $color-white;
+  text-align: center;
+}
