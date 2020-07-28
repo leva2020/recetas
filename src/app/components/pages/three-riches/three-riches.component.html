@@ -1,1 +1,20 @@
-Tres Riches!!!
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>{{data.getRiches().title}}</h3>
+      <h4>{{data.getRiches().description}}</h4>
+      <h2>BENEFICIOS</h2>
+      <ul class="bullets">
+        <li *ngFor="let item of data.getRiches().beneficts">{{item}}</li>
+      </ul>
+      <h2>VIDA UTÍL</h2>
+      <p>{{data.getRiches().life}}</p>
+    </div>
+    <div class="col-md-2">
+      <img src="{{data.getRiches().product_image}}">
+    </div>
+    <div class="col-md-6">
+      <img src="{{data.getRiches().image}}">
+    </div>
+  </div>
+</div>

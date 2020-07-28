@@ -2,6 +2,19 @@ import {Injectable} from '@angular/core';
 
 @Injectable()
 export class DataService {
+  getRiches() {
+    return {
+      title: 'TRES RICHES UHT',
+      description: 'TRES LECHES',
+      beneficts: [
+        'Jarabe listo para usar con un delicioso sabor',
+        'Viscosidad ideal para disolverse',
+      ],
+      life: 'Temperatura ambiente (<28ºC): 20 días',
+      product_image: '/assets/images/titles/gelatina.png',
+      image: '/assets/arroz-leche.png',
+    }
+  }
   getRecipes() {
     return [
       {
