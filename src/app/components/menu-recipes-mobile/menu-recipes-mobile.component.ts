@@ -13,16 +13,24 @@ export class MenuRecipesMobileComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.collapseInit();
+  }
+
+  collapse(i) {
+    this.collapseAll();
+    this.collapseItems[i] = !this.collapseItems[i]
+  }
+
+  collapseAll() {
+    this.collapseItems = []
+    this.collapseInit()
+  }
+
+  collapseInit() {
     this.data.getRecipes().forEach(
       (item) => {
         this.collapseItems.push(true)
       }
     )
-  }
-
-  collapse(i) {
-    console.log(i, this.collapseItems[i]);
-    this.collapseItems[i] = !this.collapseItems[i]
-    console.log(this.collapseItems[i]);
   }
 }
