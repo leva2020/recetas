@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {DataService} from "../../../services/data.service";
+import {LocalDeviceDetectorService} from "../../../services/local-device-detector.service";
 
 @Component({
   selector: 'app-recipes',
@@ -8,7 +9,7 @@ import {DataService} from "../../../services/data.service";
 export class RecipesComponent implements OnInit {
 
   recipe
-  constructor(public data: DataService) {
+  constructor(public data: DataService, public localDevice: LocalDeviceDetectorService) {
   }
 
   ngOnInit() {

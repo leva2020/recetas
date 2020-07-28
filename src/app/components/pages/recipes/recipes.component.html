@@ -1,7 +1,6 @@
 <h2 class="">Recetas</h2>
-<app-menu-recipes (index)="changeRecipe($event)"></app-menu-recipes>
-<!--<ul>
-  <li (click)="changeRecipe(i)" *ngFor="let item of data.getRecipes(); let i = index">{{ item.title }}</li>
-</ul>-->
-
-<app-detail-recipe [recipe]="recipe"></app-detail-recipe>
+<ng-container *ngIf="localDevice.isDesktop()">
+  <app-menu-recipes (index)="changeRecipe($event)"></app-menu-recipes>
+  <app-detail-recipe [recipe]="recipe"></app-detail-recipe>
+</ng-container>
+<app-menu-recipes-mobile *ngIf="localDevice.isMobile()" (index)="changeRecipe($event)"></app-menu-recipes-mobile>
