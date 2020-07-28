@@ -5,7 +5,20 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   .image-recipe {
-    padding-top: 3rem;
+    img {
+      margin-top: 3rem;
+      transition: all ease-in 500ms;
+      transform-style: preserve-3d;
+      -webkit-box-shadow: 0px -2px 20px -12px rgba(163,163,163,1);
+      -moz-box-shadow: 0px -2px 20px -12px rgba(163,163,163,1);
+      box-shadow: 0px -2px 20px -12px rgba(163,163,163,1);
+      &:hover {
+        cursor: pointer;
+        -webkit-box-shadow: 0px -2px 23px -10px rgba(163,163,163,1);
+        -moz-box-shadow: 0px -2px 23px -10px rgba(163,163,163,1);
+        box-shadow: 0px -2px 23px -10px rgba(163,163,163,1);
+      }
+    }
   }
   .detail {
     .main-title {

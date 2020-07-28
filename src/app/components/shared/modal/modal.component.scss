@@ -1,22 +1,28 @@
+@import "../../../../_variables";
+@import "../../../../_mixins";
 .modal-cover {
+  @include dimensions(100vh, 100%);
   position: fixed;
   display: flex;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.43);
+  background-color: rgba(0, 0, 0, 0.70);
   z-index: 100;
-  width: 100%;
-  height: 100vh;
   justify-content: center;
 }
-
 .modal-header {
-  border-bottom: 0px solid #dee2e6;
-  padding: 0.5rem 0.5rem;
-
+  border-bottom: 0;
+  padding: 0;
   .close {
-    padding: 1rem 1.5rem;
-    color: grey;
+    color: $color-red;
+    position: absolute;
+    left: -2rem;
+    margin: 0;
+    padding: 0;
+    span {
+      text-shadow: none;
+      font-size: 2.5rem;
+    }
     &:focus {
       outline: none;
     }
@@ -29,7 +35,6 @@
 .modal-content {
   z-index: 101;
 }
-
 .modal-dialog {
   position: fixed;
   display: flex;
@@ -37,4 +42,7 @@
   top: 0;
   width: 100%;
   margin: 2.75rem auto;
+}
+.modal-body {
+  padding: 0;
 }
