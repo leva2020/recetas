@@ -12,7 +12,7 @@ export class DataService {
       ],
       life: 'Temperatura ambiente (<28ºC): 20 días',
       product_image: '/assets/images/titles/gelatina.png',
-      image: '/assets/arroz-leche.png',
+      image: '/assets/images/photos/tres-riches.png',
     }
   }
   getRecipes() {
@@ -61,6 +61,24 @@ export class DataService {
         video: '',
         ingredients: [
           '1 taza de arroz',
+          '4 tazas de agua',
+          '1 astilla de canela',
+          '2 tazas Jarabe Tres Riches® 1L',
+          'Canela al gusto para decoración',
+          'Arándanos al gusto',
+          'Hojas de menta'
+        ],
+        preparation: ['ansdmanda', 'juiiji'],
+        isCollapse: true
+      },
+      {
+        icon: '/assets/images/titles/arroz-con.png',
+        title_icon: 'DE TRES LECHES',
+        title: 'TORTA REMOJADA DE TRES LECHES',
+        image: '/assets/arroz-leche.png',
+        video: '',
+        ingredients: [
+          '1 torta mediana',
           '4 tazas de agua',
           '1 astilla de canela',
           '2 tazas Jarabe Tres Riches® 1L',
