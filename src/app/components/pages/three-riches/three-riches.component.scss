@@ -3,6 +3,14 @@
 .three-riches {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  .box-image {
+    margin-bottom: 1rem;
+    &:before {
+      content: url('../../../../assets/images/linea.png');
+      position: absolute;
+      left: 0;
+    }
+  }
   h3 {
     font-weight: 700;
     letter-spacing: .5px;
