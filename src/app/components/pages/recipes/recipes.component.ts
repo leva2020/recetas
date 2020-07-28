@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {DataService} from "../../../services/data.service";
 
 @Component({
   selector: 'app-recipes',
@@ -6,8 +7,15 @@ import {Component, OnInit} from '@angular/core'
 })
 export class RecipesComponent implements OnInit {
 
-  constructor() {
+  recipe
+  constructor(public data: DataService) {
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.recipe = this.data.getRecipes()[0];
+  }
+
+  changeRecipe(i) {
+    this.recipe = this.data.getRecipes()[i];
+  }
 }

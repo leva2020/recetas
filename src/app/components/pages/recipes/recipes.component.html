@@ -1,1 +1,6 @@
-Recetas!!!
+<!--<app-menu-recipes></app-menu-recipes>-->
+<ul>
+  <li (click)="changeRecipe(i)" *ngFor="let item of data.getRecipes(); let i = index">{{ item.title }}</li>
+</ul>
+
+<app-detail-recipe [recipe]="recipe"></app-detail-recipe>
