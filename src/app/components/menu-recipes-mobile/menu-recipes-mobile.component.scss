@@ -2,7 +2,13 @@
 @import "../../../_mixins";
 
 .nav-recipes-mobile {
-  .row {
+  .title-recipe-mobile {
+    .logo-tres {
+      max-height: 7rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .row-item {
     border-top: 2px solid $color-text;
     &.active {
       h2 {

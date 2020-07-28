@@ -1,14 +1,21 @@
-<div class="container nav-recipes-mobile" *ngFor="let item of data.getRecipes(); let i = index">
-  <div class="row" [ngClass]="!collapseItems[i] ? 'active': ''">
+<div class="nav-recipes-mobile">
+  <div class="row title-recipe-mobile">
     <div class="col">
-      <h2 (click)="collapse(i)">{{item.title}}</h2>
-    </div>
-    <div class="col-auto align-self-center">
-      <i class="fas fa-chevron-down"></i>
+      <img class="logo-tres" src="assets/images/logo-tres-riches.svg" alt="">
     </div>
   </div>
-  <div [ngbCollapse]="collapseItems[i]">
-    <app-detail-recipe (video)="showModal($event)" [id]="i" [recipe]="item"></app-detail-recipe>
+  <div class="container" *ngFor="let item of data.getRecipes(); let i = index">
+    <div class="row row-item" [ngClass]="!collapseItems[i] ? 'active': ''">
+      <div class="col">
+        <h2 (click)="collapse(i)">{{item.title}}</h2>
+      </div>
+      <div class="col-auto align-self-center">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+    <div [ngbCollapse]="collapseItems[i]">
+      <app-detail-recipe (video)="showModal($event)" [id]="i" [recipe]="item"></app-detail-recipe>
+    </div>
   </div>
 </div>
 <div *ngIf="modal">
