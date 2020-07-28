@@ -5,7 +5,7 @@ import {ThreeRichesComponent} from "./components/pages/three-riches/three-riches
 
 const routes: Routes = [
   {
-    path: 'recetas',
+    path: '',
     component: RecipesComponent,
   },
   {
