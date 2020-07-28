@@ -33,6 +33,13 @@ ul {
         position: absolute;
         left: -1rem;
       }
+      &.nada {
+        margin-top: .75rem;
+        &:before {
+          content: "";
+          display: none;
+        }
+      }
     }
   }
 }

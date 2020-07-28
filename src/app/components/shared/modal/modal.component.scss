@@ -14,11 +14,16 @@
   border-bottom: 0;
   padding: 0;
   .close {
-    color: $color-red;
+    color: $color-white;
     position: absolute;
     left: -2rem;
     margin: 0;
     padding: 0;
+    opacity: 1;
+    @media screen and (max-width: 767px) {
+      left: .5rem;
+      top: -2rem;
+    }
     span {
       text-shadow: none;
       font-size: 2.5rem;
