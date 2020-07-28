@@ -1,0 +1,18 @@
+@import "../../../_variables";
+@import "../../../_mixins";
+
+.nav-recipes {
+  list-style: none;
+  padding: 0;
+  li {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-top: 2px solid $color-text;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      color: $color-red;
+    }
+  }
+}

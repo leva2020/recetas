@@ -4,6 +4,7 @@ import {DataService} from "../../services/data.service";
 @Component({
   selector: 'app-menu-recipes-mobile',
   templateUrl: './menu-recipes-mobile.component.html',
+  styleUrls: ['./menu-recipes-mobile.component.scss'],
 })
 export class MenuRecipesMobileComponent implements OnInit {
 

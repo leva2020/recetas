@@ -1,4 +1,4 @@
-<div *ngFor="let item of data.getRecipes(); let i = index">
+<div class="container nav-recipes-mobile" *ngFor="let item of data.getRecipes(); let i = index">
   <div class="row" [ngClass]="!collapseItems[i] ? 'active': ''">
     <h2 (click)="collapse(i)">{{item.title}}</h2>
   </div>

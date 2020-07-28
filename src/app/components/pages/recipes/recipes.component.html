@@ -1,8 +1,9 @@
-<div class="container">
-  <h2 class="">Recetas</h2>
+<div class="container recipes">
   <ng-container *ngIf="localDevice.isDesktop()">
     <div class="row">
       <div class="col-md-4">
+        <img class="logo-tres" src="assets/images/logo-tres-riches.svg" alt="">
+        <h2 class="">Recetas</h2>
         <app-menu-recipes (index)="changeRecipe($event)"></app-menu-recipes>
       </div>
       <div class="col-md-8">

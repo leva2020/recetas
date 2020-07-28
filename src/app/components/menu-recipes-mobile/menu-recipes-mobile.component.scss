@@ -1,0 +1,20 @@
+@import "../../../_variables";
+@import "../../../_mixins";
+
+.nav-recipes-mobile {
+  .row {
+    border-top: 2px solid $color-text;
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 1rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+
+}
