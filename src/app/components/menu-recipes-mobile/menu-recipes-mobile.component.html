@@ -1,6 +1,11 @@
 <div class="container nav-recipes-mobile" *ngFor="let item of data.getRecipes(); let i = index">
   <div class="row" [ngClass]="!collapseItems[i] ? 'active': ''">
-    <h2 (click)="collapse(i)">{{item.title}}</h2>
+    <div class="col">
+      <h2 (click)="collapse(i)">{{item.title}}</h2>
+    </div>
+    <div class="col-auto align-self-center">
+      <i class="fas fa-chevron-down"></i>
+    </div>
   </div>
   <div [ngbCollapse]="collapseItems[i]">
     <app-detail-recipe [recipe]="item"></app-detail-recipe>

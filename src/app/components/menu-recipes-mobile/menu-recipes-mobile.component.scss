@@ -4,6 +4,16 @@
 .nav-recipes-mobile {
   .row {
     border-top: 2px solid $color-text;
+    &.active {
+      h2 {
+        color: $color-red;
+        font-weight: 600;
+      }
+      i {
+        transform: rotateX(180deg);
+        color: $color-red;
+      }
+    }
     h2 {
       font-size: 1rem;
       font-weight: 600;
@@ -14,6 +24,9 @@
       &:hover {
         color: $color-red;
       }
+    }
+    i {
+      transition: all ease-in 400ms;
     }
   }
 
