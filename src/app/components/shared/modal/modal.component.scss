@@ -1,0 +1,40 @@
+.modal-cover {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.43);
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+.modal-header {
+  border-bottom: 0px solid #dee2e6;
+  padding: 0.5rem 0.5rem;
+
+  .close {
+    padding: 1rem 1.5rem;
+    color: grey;
+    &:focus {
+      outline: none;
+    }
+    i:focus {
+      outline: none;
+    }
+  }
+}
+
+.modal-content {
+  z-index: 101;
+}
+
+.modal-dialog {
+  position: fixed;
+  display: flex;
+  z-index: 101;
+  top: 0;
+  width: 100%;
+  margin: 2.75rem auto;
+}

@@ -1,6 +1,7 @@
-<!--<app-menu-recipes></app-menu-recipes>-->
-<ul>
+<h2 class="">Recetas</h2>
+<app-menu-recipes (index)="changeRecipe($event)"></app-menu-recipes>
+<!--<ul>
   <li (click)="changeRecipe(i)" *ngFor="let item of data.getRecipes(); let i = index">{{ item.title }}</li>
-</ul>
+</ul>-->
 
 <app-detail-recipe [recipe]="recipe"></app-detail-recipe>
