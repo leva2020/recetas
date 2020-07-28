@@ -14,7 +14,11 @@
         <div class="content">
           <h2>Ingredientes</h2>
           <ul class="bullets">
-            <li [ngClass]="{'nada': recipe.id === 'pannacota' && (i === 0 || i === 7)}" [innerHTML]="ingredient" *ngFor="let ingredient of recipe.ingredients; let i = index"></li>
+            <li [ngClass]="{
+            'nada':
+              (recipe.id === 'pannacota' && (i === 0 || i === 7)) ||
+              (recipe.id === 'fresas' && (i === 0 || i === 4))
+            }" [innerHTML]="ingredient" *ngFor="let ingredient of recipe.ingredients; let i = index"></li>
           </ul>
           <h2>Preparación</h2>
           <div class="col steps">

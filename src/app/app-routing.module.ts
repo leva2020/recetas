@@ -11,10 +11,6 @@ const routes: Routes = [
   {
     path: 'tres-riches',
     component: ThreeRichesComponent,
-  },
-  {
-    path: '**',
-    component: RecipesComponent,
   }
 ]
 

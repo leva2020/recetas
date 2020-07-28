@@ -31,13 +31,16 @@ export class MenuRecipesMobileComponent implements OnInit {
   }
 
   collapse(i) {
-    this.collapseAll();
     this.collapseItems[i] = !this.collapseItems[i]
+    this.collapseAll(i);
   }
 
-  collapseAll() {
-    this.collapseItems = []
-    this.collapseInit()
+  collapseAll(i) {
+    this.collapseItems.forEach((it, index) => {
+      if (index !== i) {
+        this.collapseItems[index] = true
+      }
+    })
   }
 
   collapseInit() {

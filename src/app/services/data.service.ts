@@ -7,11 +7,11 @@ export class DataService {
       title: 'TRES RICHES',
       description: 'TRES LECHES',
       beneficts: [
-        'Jarabe listo para usar con delicioso sabor, color y aroma de la mezcla tradicional tres leches.',
-        'Viscosidad ideal para absorberse uniformemente sin escurrirse en la torta.',
-        'Práctico de usar facilitando la operación.',
-        'Reduce la merma y estandariza tus recetas.',
-        'Calidad constante'
+        'De fácil uso, ayuda a mejorar  y facilitar la preparación de la receta.',
+        'En empaque de 1 litro Tetra Pak',
+        'Remojo ideal para una absorción perfecta.',
+        'Facilita la preparación de recetas en casa.',
+        'Clásico sabor y aroma de la mezcla tres leches tradicional.'
       ],
       life: '270 días en refrigeración (4-8ºC) o en un lugar fresco y seco por debajo de 25º',
       product_image: '/assets/images/photos/riches-caja.png',
@@ -21,16 +21,18 @@ export class DataService {
   getRecipes() {
     return [
       {
-        id: '',
+        id: 'fresas',
         icon: '/assets/images/titles/gelatina.png',
         title_icon: 'DE FRESAS Y TRES LECHES',
         title: 'GELATINA DE FRESA Y TRES LECHES',
         image: '/assets/images/photos/gelatina.png',
         video: '1dk8fuhcGPg',
         ingredients: [
+          '<strong>Para la gelatina Tres Riches®</strong>',
           '500gr de Jarabe Tres Riches® 1L',
           '8gr de gelatina sin sabor',
           '40gr de agua tibia para hidratar la gelatina Para la gelatina de fresa',
+          '<strong>Para la gelatina de fresa</strong>',
           '30gr de agua tibia para hidratar la gelatina',
           '6gr de gelatina de fresa',
           '100gr de agua fría',
@@ -93,7 +95,7 @@ export class DataService {
           'Mezcla a fuego medio el <strong>Jarabe Tres Riches®</strong> con la crema de leche hasta que hierva.',
           'Agrega a la mezcla la gelatina sin sabor previamente hidratada y el chocolate blanco.',
           'Adiciona la esencia de vainilla y revuelve hasta integrar. Luego vierte la mezcla en moldes hasta llenar 3⁄4 del recipiente y lleva a refrigeración por 2 horas.',
-          'Repite todos los paso pero esta 4 vez cambia el chocolate blanco por la crema de avellanas. Vierte la mezcla sobre la primera capa que adicionaste en el molde y lleva de nuevo a refrigeración por 2 horas más.',
+          'Repite todos los paso pero esta vez cambia el chocolate blanco por la crema de avellanas. Vierte la mezcla sobre la primera capa que adicionaste en el molde y lleva de nuevo a refrigeración por 2 horas más.',
           'Decora con los ingredients que desees y <strong>disfruta!</strong>'
         ],
         isCollapse: true
@@ -116,7 +118,7 @@ export class DataService {
         ],
         preparation: [
           'Hierbe el agua con las astillas de canela y agrega el arroz. Una vez éste el arroz en su punto, retira del fuego y deje reposar.',
-          'Adiciona el <strong>Jarabe Tres Riches r®</strong> y cocina a fuego lento mezclando de manera homogénea hasta obtener la consistencia deseada.',
+          'Adiciona el <strong>Jarabe Tres Riches®</strong> y cocina a fuego lento mezclando de manera homogénea hasta obtener la consistencia deseada.',
           'Retira del fuego y deja reposar.',
           'Decora con fruta, canela en polvo o en astilla y/o menta y <strong>disfruta!</strong>'
         ],
