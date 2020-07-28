@@ -14,13 +14,13 @@
         <div class="content">
           <h2>Ingredientes</h2>
           <ul class="bullets">
-            <li *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</li>
+            <li [ngClass]="{'nada': recipe.id === 'pannacota' && (i === 0 || i === 7)}" [innerHTML]="ingredient" *ngFor="let ingredient of recipe.ingredients; let i = index"></li>
           </ul>
           <h2>Preparación</h2>
           <div class="col steps">
             <div class="row" *ngFor="let preparation of recipe.preparation; let i = index">
               <div class="col-auto number">{{i + 1}}</div>
-              <div class="col">{{preparation}}</div>
+              <div class="col" [innerHTML]="preparation"></div>
             </div>
           </div>
         </div>
@@ -33,8 +33,6 @@
     <div class=".modal-body">
       <youtube-player
         videoId="{{recipe.video}}"
-        [height]=""
-        [width]=""
         [ngClass]="'embed-responsive embed-responsive-16by9'">
       </youtube-player>
     </div>

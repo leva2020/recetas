@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core'
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core'
 
 @Component({
   selector: 'app-detail-recipe',
@@ -9,6 +9,7 @@ export class DetailRecipeComponent implements OnInit {
 
   modal = false
   @Input() recipe;
+  @Output() video = new EventEmitter();
 
   constructor() {
   }
@@ -19,6 +20,7 @@ export class DetailRecipeComponent implements OnInit {
   openModal() {
     if (this.recipe.video !== '') {
       this.modal = !this.modal
+      this.video.emit(this.recipe.video)
     }
   }
 }

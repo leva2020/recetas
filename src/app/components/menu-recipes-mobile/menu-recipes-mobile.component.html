@@ -8,7 +8,16 @@
     </div>
   </div>
   <div [ngbCollapse]="collapseItems[i]">
-    <app-detail-recipe [recipe]="item"></app-detail-recipe>
+    <app-detail-recipe (video)="showModal($event)" [id]="i" [recipe]="item"></app-detail-recipe>
   </div>
 </div>
-
+<div *ngIf="modal">
+  <app-modal (close)="closeModal()">
+    <div class=".modal-body">
+      <youtube-player
+        videoId="{{this.video}}"
+        [ngClass]="'embed-responsive embed-responsive-16by9'">
+      </youtube-player>
+    </div>
+  </app-modal>
+</div>

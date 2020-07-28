@@ -10,11 +10,24 @@ export class MenuRecipesMobileComponent implements OnInit {
 
   @Output() index = new EventEmitter()
   collapseItems = []
+  modal = false
+  video = ''
+
   constructor(public data: DataService) {
   }
 
   ngOnInit() {
     this.collapseInit();
+  }
+
+  showModal(video) {
+    this.video = video
+    this.modal = !this.modal
+  }
+
+  closeModal() {
+    this.video = ''
+    this.modal = false
   }
 
   collapse(i) {
