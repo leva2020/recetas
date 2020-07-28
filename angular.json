@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "recetas"
+    }
+  },
+  "defaultProject": "recetas",
+  "cli": {
+    "analytics": false
+  }
 }
