@@ -1,12 +1,14 @@
-<h2 class="">Recetas</h2>
-<ng-container *ngIf="localDevice.isDesktop()">
-  <div class="row">
-    <div class="col-md-4">
-      <app-menu-recipes (index)="changeRecipe($event)"></app-menu-recipes>
+<div class="container">
+  <h2 class="">Recetas</h2>
+  <ng-container *ngIf="localDevice.isDesktop()">
+    <div class="row">
+      <div class="col-md-4">
+        <app-menu-recipes (index)="changeRecipe($event)"></app-menu-recipes>
+      </div>
+      <div class="col-md-8">
+        <app-detail-recipe [recipe]="recipe"></app-detail-recipe>
+      </div>
     </div>
-    <div class="col-md-8">
-      <app-detail-recipe [recipe]="recipe"></app-detail-recipe>
-    </div>
-  </div>
-</ng-container>
-<app-menu-recipes-mobile *ngIf="localDevice.isMobile()" (index)="changeRecipe($event)"></app-menu-recipes-mobile>
+  </ng-container>
+  <app-menu-recipes-mobile *ngIf="localDevice.isMobile()" (index)="changeRecipe($event)"></app-menu-recipes-mobile>
+</div>

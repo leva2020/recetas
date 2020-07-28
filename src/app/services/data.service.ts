@@ -19,7 +19,8 @@ export class DataService {
           '00gr de agua fría',
           '100gr de fresas en trozos'
         ],
-        preparation: ['ansdmanda', 'juiiji']
+        preparation: ['ansdmanda', 'juiiji'],
+        isCollapse: true
       },
       {
         icon: '/assets/images/titles/gelatina.png',
@@ -27,15 +28,17 @@ export class DataService {
         title: 'FLAN TRES LECHES',
         image: '',
         ingredients: ['Gelatina de fresa 200 gr', 'Agua 100 gr'],
-        preparation: ['ansdmanda', 'juiiji']
+        preparation: ['ansdmanda', 'juiiji'],
+        isCollapse: true
       },
       {
         icon: '/assets/images/titles/gelatina.png',
-        title_icon: 'DE FRESAS Y TRES LECHES',
+        title_icon: 'TRES LECHES Y CHOCOLATE',
         title: 'PANNA COTA TRES LECHES Y CHOCOLATE',
         image: '',
         ingredients: ['Gelatina de fresa 200 gr', 'Agua 100 gr'],
-        preparation: ['ansdmanda', 'juiiji']
+        preparation: ['ansdmanda', 'juiiji'],
+        isCollapse: true
       },
       {
         icon: '/assets/images/titles/arroz-con.png',
@@ -52,7 +55,8 @@ export class DataService {
           'Arándanos al gusto',
           'Hojas de menta'
         ],
-        preparation: ['ansdmanda', 'juiiji']
+        preparation: ['ansdmanda', 'juiiji'],
+        isCollapse: true
       },
     ]
   }

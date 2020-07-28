@@ -13,7 +13,7 @@ import {ThreeRichesComponent} from "./components/pages/three-riches/three-riches
 import {AppRoutingModule} from './app-routing.module'
 import {DataService} from "./services/data.service";
 import {YouTubePlayerModule} from "@angular/youtube-player";
-
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { DeviceDetectorService } from 'ngx-device-detector'
 import {LocalDeviceDetectorService} from "./services/local-device-detector.service";
 
@@ -32,6 +32,7 @@ import {LocalDeviceDetectorService} from "./services/local-device-detector.servi
   imports: [
     AppRoutingModule,
     BrowserModule,
+    NgbModule,
     YouTubePlayerModule
   ],
   providers: [DataService, DeviceDetectorService, LocalDeviceDetectorService],

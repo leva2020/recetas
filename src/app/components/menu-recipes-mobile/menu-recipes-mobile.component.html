@@ -1,3 +1,9 @@
-<ul>
-  <li (click)="index.emit(i)" *ngFor="let item of data.getRecipes(); let i = index">{{ item.title }}..</li>
-</ul>
+<div *ngFor="let item of data.getRecipes(); let i = index">
+  <div class="row" [ngClass]="!collapseItems[i] ? 'active': ''">
+    <h2 (click)="collapse(i)">{{item.title}}</h2>
+  </div>
+  <div [ngbCollapse]="collapseItems[i]">
+    <app-detail-recipe [recipe]="item"></app-detail-recipe>
+  </div>
+</div>
+
