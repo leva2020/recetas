@@ -22,10 +22,26 @@
           </ul>
           <h2>Preparación</h2>
           <div class="col steps">
-            <div class="row" *ngFor="let preparation of recipe.preparation; let i = index">
-              <div class="col-auto number">{{i + 1}}</div>
-              <div class="col" [innerHTML]="preparation"></div>
-            </div>
+            <ng-container *ngIf="recipe.preparation.length > 2; else simple">
+              <ng-container *ngFor="let preparation of recipe.preparation; let i = index">
+                <div *ngIf="i%2===0" class="row">
+                  <div class="col">
+                    <div class="col-auto number">{{i + 1}}</div>
+                    <div class="col" [innerHTML]="preparation"></div>
+                  </div>
+                  <div class="col" *ngIf="recipe.preparation.length > i+1">
+                    <div class="col-auto number">{{i + 2}}</div>
+                    <div class="col" [innerHTML]="recipe.preparation[i+1]"></div>
+                  </div>
+                </div>
+              </ng-container>
+            </ng-container>
+            <ng-template #simple>
+              <div class="row" *ngFor="let preparation of recipe.preparation; let i = index">
+                <div class="col-auto number">{{i + 1}}</div>
+                <div class="col" [innerHTML]="preparation"></div>
+              </div>
+            </ng-template>
           </div>
         </div>
       </div>
