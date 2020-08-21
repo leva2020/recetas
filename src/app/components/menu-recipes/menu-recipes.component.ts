@@ -9,6 +9,7 @@ import {DataService} from "../../services/data.service";
 export class MenuRecipesComponent implements OnInit {
 
   @Output() index = new EventEmitter()
+  @Output() modal = new EventEmitter()
   constructor(public data: DataService) {
   }
 

@@ -4,10 +4,10 @@
       <div class="col-md-4">
         <img class="logo-tres" src="assets/images/logo-tres-riches.svg" alt="">
         <h2 class="">Recetas</h2>
-        <app-menu-recipes (index)="changeRecipe($event)"></app-menu-recipes>
+        <app-menu-recipes (modal)="modal=$event" (index)="changeRecipe($event)"></app-menu-recipes>
       </div>
       <div class="col-md-8">
-        <app-detail-recipe [recipe]="recipe"></app-detail-recipe>
+        <app-detail-recipe [modalMenu]="modal" [recipe]="recipe"></app-detail-recipe>
       </div>
     </div>
   </ng-container>

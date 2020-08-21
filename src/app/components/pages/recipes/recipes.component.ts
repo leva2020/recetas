@@ -10,6 +10,7 @@ import {LocalDeviceDetectorService} from "../../../services/local-device-detecto
 export class RecipesComponent implements OnInit {
 
   recipe
+  modal = false
   constructor(public data: DataService, public localDevice: LocalDeviceDetectorService) {
   }
 

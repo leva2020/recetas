@@ -7,7 +7,7 @@
   <div class="container" *ngFor="let item of data.getRecipes(); let i = index">
     <div class="row row-item" [ngClass]="!collapseItems[i] ? 'active': ''">
       <div class="col">
-        <h2 (click)="collapse(i)">{{item.title}}</h2>
+        <h2 (click)="collapse(i); showModal(item.video)">{{item.title}}</h2>
       </div>
       <div class="col-auto align-self-center">
         <i class="fas fa-chevron-down"></i>
@@ -22,6 +22,7 @@
   <app-modal (close)="closeModal()">
     <div class=".modal-body">
       <youtube-player
+        startSeconds="10"
         videoId="{{this.video}}"
         [ngClass]="'embed-responsive embed-responsive-16by9'">
       </youtube-player>
