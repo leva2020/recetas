@@ -21,7 +21,7 @@
             }" [innerHTML]="ingredient" *ngFor="let ingredient of recipe.ingredients; let i = index"></li>
           </ul>
           <h2>Preparación</h2>
-          <div class="col steps">
+          <div class="col steps count-{{recipe.preparation.length}}">
             <ng-container *ngIf="recipe.preparation.length > 2; else simple">
               <ng-container *ngFor="let preparation of recipe.preparation; let i = index">
                 <div *ngIf="i%2===0" class="row">
