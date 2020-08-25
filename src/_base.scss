@@ -44,10 +44,15 @@ ul {
   }
 }
 .float-button {
-  width: 4rem;
-  object-fit: contain;
   position: fixed;
   z-index: 99;
   bottom: 2rem;
   right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+  }
 }
