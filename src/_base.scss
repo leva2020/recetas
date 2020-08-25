@@ -44,7 +44,8 @@ ul {
   }
 }
 .float-button {
-  max-width: 4rem;
+  width: 4rem;
+  object-fit: contain;
   position: fixed;
   z-index: 99;
   bottom: 2rem;
